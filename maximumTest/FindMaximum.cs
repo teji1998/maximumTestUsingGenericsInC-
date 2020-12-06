@@ -40,6 +40,13 @@ namespace maximumTest
             return maximum;
         }
 
+        /// <summary>
+        /// Finding the maximum string value.
+        /// </summary>
+        /// <param name="firstValue">The first value.</param>
+        /// <param name="secondValue">The second value.</param>
+        /// <param name="thirdValue">The third value.</param>
+        /// <returns></returns>
         public string FindingMaximumStringValue(string firstValue, string secondValue, string thirdValue)
         {
             string maximum = firstValue;

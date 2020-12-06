@@ -74,6 +74,9 @@ namespace maximumTestUsingMSTest
             Assert.AreEqual(87.6f, maximumValue);
         }
 
+        /// <summary>
+        /// Given three strings when the maximum string value at first position should return maximum string.
+        /// </summary>
         [TestMethod]
         public void givenThreeStrings_WhenMaximumStringValueAtFirstPosition_ShouldReturnMaximumString()
         {
@@ -81,6 +84,9 @@ namespace maximumTestUsingMSTest
             Assert.AreEqual("London", maximumValue);
         }
 
+        /// <summary>
+        /// Given three strings when the maximum string value at second position should return maximum string.
+        /// </summary>
         [TestMethod]
         public void givenThreeStrings_WhenMaximumStringValueAtSecondPosition_ShouldReturnMaximumString()
         {
@@ -89,6 +95,9 @@ namespace maximumTestUsingMSTest
         }
 
 
+        /// <summary>
+        /// Given three strings when the maximum string value at third position should return maximum string.
+        /// </summary>
         [TestMethod]
         public void givenThreeStrings_WhenMaximumStringValueAtThirdPosition_ShouldReturnMaximumString()
         {
