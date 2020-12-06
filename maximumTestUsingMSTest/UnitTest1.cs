@@ -60,8 +60,8 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtSecondPosition_ShouldReturnMaximumFloatNumber()
         {
-            float maximumValue = findMaximum.FindingMaximumFloatValue(37.5f, 87.6f, 56.4f);
-            Assert.AreEqual(87.6f, maximumValue);
+            float maximumValue = findMaximum.FindingMaximumFloatValue(37.5f, 85.6f, 56.4f);
+            Assert.AreEqual(85.6f, maximumValue);
         }
 
         /// <summary>
