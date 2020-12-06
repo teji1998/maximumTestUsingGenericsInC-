@@ -13,7 +13,10 @@ namespace maximumTestUsingMSTest
         public UnitTest1 () {
             findMaximum = new FindMaximum();
         }
-    
+
+        /// <summary>
+        /// Given three integers when having maximum integer at first position should return maximum integer.
+        /// </summary>
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtFirstPosition_ShouldReturnMaximumInteger()
         {
@@ -21,6 +24,9 @@ namespace maximumTestUsingMSTest
             Assert.AreEqual(8, maximumInteger);
         }
 
+        /// <summary>
+        /// Given three integers when having maximum integer at second position should return maximum integer.
+        /// </summary>
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtSecondPosition_ShouldReturnMaximumInteger()
         {
@@ -28,6 +34,9 @@ namespace maximumTestUsingMSTest
             Assert.AreEqual(8, maximumInteger);
         }
 
+        /// <summary>
+        /// Given three integers when having maximum integer at third position should return maximum integer.
+        /// </summary>
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtThirdPosition_ShouldReturnMaximumInteger()
         {
@@ -35,22 +44,31 @@ namespace maximumTestUsingMSTest
             Assert.AreEqual(8, maximumInteger);
         }
 
+        /// <summary>
+        /// Given three float numbers when having maximum float number at first position should return maximum float number.
+        /// </summary>
         [TestMethod]
-        public void givenThreeIntegers_WhenMaximumFloatNumberAtFirstPosition_ShouldReturnMaximumFloatNumber()
+        public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtFirstPosition_ShouldReturnMaximumFloatNumber()
         {
             float maximumValue = findMaximum.FindingMaximumFloatValue(87.6f, 37.5f, 56.4f);
             Assert.AreEqual(87.6f, maximumValue);
         }
 
+        /// <summary>
+        /// Given three float numbers when having maximum float number at second position should return maximum float number.
+        /// </summary>
         [TestMethod]
-        public void givenThreeIntegers_WhenMaximumFloatNumberAtSecondPosition_ShouldReturnMaximumFloatNumber()
+        public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtSecondPosition_ShouldReturnMaximumFloatNumber()
         {
             float maximumValue = findMaximum.FindingMaximumFloatValue(37.5f, 87.6f, 56.4f);
             Assert.AreEqual(87.6f, maximumValue);
         }
 
+        /// <summary>
+        /// Given three float numbers when maximum float number at third position should return maximum float number.
+        /// </summary>
         [TestMethod]
-        public void givenThreeIntegers_WhenMaximumFloatNumberAtThirdPosition_ShouldReturnMaximumFloatNumber()
+        public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtThirdPosition_ShouldReturnMaximumFloatNumber()
         {
             float maximumValue = findMaximum.FindingMaximumFloatValue(37.5f, 56.4f, 87.6f);
             Assert.AreEqual(87.6f, maximumValue);

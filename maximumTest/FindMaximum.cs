@@ -6,6 +6,13 @@ namespace maximumTest
 {
     public class FindMaximum
     {
+        /// <summary>
+        /// Finding the maximum integer value.
+        /// </summary>
+        /// <param name="firstValue">The first value.</param>
+        /// <param name="secondValue">The second value.</param>
+        /// <param name="thirdValue">The third value.</param>
+        /// <returns></returns>
         public int FindingMaximumIntegerValue(int firstValue, int secondValue, int thirdValue) 
         {
             int maximum = firstValue;
@@ -16,6 +23,13 @@ namespace maximumTest
             return maximum;
         }
 
+        /// <summary>
+        /// Finding the maximum float value.
+        /// </summary>
+        /// <param name="firstValue">The first value.</param>
+        /// <param name="secondValue">The second value.</param>
+        /// <param name="thirdValue">The third value.</param>
+        /// <returns></returns>
         public float FindingMaximumFloatValue(float firstValue, float secondValue, float thirdValue)
         {
             float maximum = firstValue;
