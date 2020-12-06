@@ -33,14 +33,30 @@ namespace maximumTest
             }
 
             /// <summary>
-            /// Maximum value is returned.
+            /// Maximum value from sorted array is returned.
             /// </summary>
             /// <param name="data">The data.</param>
             /// <returns></returns>
-            public T MaximumMethod(params T[] data)
+            public T MaximumValueInArrayMethod(params T[] data)
             {
                 T[] sortedArray = Sort(this.array);
                 return sortedArray[sortedArray.Length - 1];
+            }
+
+            /// <summary>
+            /// Maximum value is returned.
+            /// </summary>
+            /// <returns></returns>
+            public T MaximumValue()
+            {
+                var maxValue = MaximumValueInArrayMethod(this.array);
+                return maxValue;
+            }
+
+            public void PrintMaximumValue()
+            {
+                var maxValue = MaximumValueInArrayMethod(this.array);
+                Console.WriteLine("Maximum value is : " + maxValue);
             }
         }
         
