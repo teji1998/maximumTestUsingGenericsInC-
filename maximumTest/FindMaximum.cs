@@ -39,5 +39,15 @@ namespace maximumTest
                 maximum = thirdValue;
             return maximum;
         }
+
+        public string FindingMaximumStringValue(string firstValue, string secondValue, string thirdValue)
+        {
+            string maximum = firstValue;
+            if (secondValue.CompareTo(maximum) > 0)
+                maximum = secondValue;
+            if (thirdValue.CompareTo(maximum) > 0)
+                maximum = thirdValue;
+            return maximum;
+        }
     }
 }

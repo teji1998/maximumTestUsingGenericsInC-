@@ -74,5 +74,13 @@ namespace maximumTestUsingMSTest
             Assert.AreEqual(87.6f, maximumValue);
         }
 
+        [TestMethod]
+        public void givenThreeStrings_WhenMaximumStringValueAtFirstPosition_ShouldReturnMaximumString()
+        {
+            string maximumValue = findMaximum.FindingMaximumStringValue("London", "Hogwarts", "Italy");
+            Assert.AreEqual("London", maximumValue);
+        }
+
+
     }
 }
