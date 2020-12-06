@@ -38,7 +38,14 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumFloatNumberAtFirstPosition_ShouldReturnMaximumFloatNumber()
         {
-            float maximumValue = findMaximum.FindingMaximumFloatValue(37.5f, 56.4f, 87.6f);
+            float maximumValue = findMaximum.FindingMaximumFloatValue(87.6f, 37.5f, 56.4f);
+            Assert.AreEqual(87.6f, maximumValue);
+        }
+
+        [TestMethod]
+        public void givenThreeIntegers_WhenMaximumFloatNumberAtSecondPosition_ShouldReturnMaximumFloatNumber()
+        {
+            float maximumValue = findMaximum.FindingMaximumFloatValue(37.5f, 87.6f, 56.4f);
             Assert.AreEqual(87.6f, maximumValue);
         }
 
