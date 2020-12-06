@@ -8,19 +8,14 @@ namespace maximumTestUsingMSTest
     [TestClass]
     public class UnitTest1
     {
-        FindMaximum findMaximum;
-
-        public UnitTest1 () {
-            findMaximum = new FindMaximum();
-        }
-
+       
         /// <summary>
         /// Given three integers when having maximum integer at first position should return maximum integer.
         /// </summary>
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtFirstPosition_ShouldReturnMaximumInteger()
         {
-            int maximumInteger = findMaximum.FindingMaximumIntegerValue(8, 3, 5);
+            int maximumInteger = new FindMaximum.GenericMaximum<int>(8, 3, 5).MaximumMethod();
             Assert.AreEqual(8, maximumInteger);
         }
 
@@ -30,7 +25,7 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtSecondPosition_ShouldReturnMaximumInteger()
         {
-            int maximumInteger = findMaximum.FindingMaximumIntegerValue(3, 8, 5);
+            int maximumInteger = new FindMaximum.GenericMaximum<int>(3, 8, 5).MaximumMethod();
             Assert.AreEqual(8, maximumInteger);
         }
 
@@ -40,7 +35,7 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtThirdPosition_ShouldReturnMaximumInteger()
         {
-            int maximumInteger = findMaximum.FindingMaximumIntegerValue(3, 5, 8);
+            int maximumInteger = new FindMaximum.GenericMaximum<int>(3, 5, 8).MaximumMethod();
             Assert.AreEqual(8, maximumInteger);
         }
 
@@ -50,7 +45,7 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtFirstPosition_ShouldReturnMaximumFloatNumber()
         {
-            float maximumValue = findMaximum.FindingMaximumFloatValue(87.6f, 37.5f, 56.4f);
+            float maximumValue = new FindMaximum.GenericMaximum<float>(87.6f, 37.5f, 56.4f).MaximumMethod();
             Assert.AreEqual(87.6f, maximumValue);
         }
 
@@ -60,7 +55,7 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtSecondPosition_ShouldReturnMaximumFloatNumber()
         {
-            float maximumValue = findMaximum.FindingMaximumFloatValue(37.5f, 85.6f, 56.4f);
+            float maximumValue = new FindMaximum.GenericMaximum<float>(37.5f, 85.6f, 56.4f).MaximumMethod();
             Assert.AreEqual(85.6f, maximumValue);
         }
 
@@ -70,7 +65,7 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtThirdPosition_ShouldReturnMaximumFloatNumber()
         {
-            float maximumValue = findMaximum.FindingMaximumFloatValue(37.5f, 56.4f, 87.6f);
+            float maximumValue = new FindMaximum.GenericMaximum<float>(37.5f, 56.4f, 87.6f).MaximumMethod();
             Assert.AreEqual(87.6f, maximumValue);
         }
 
@@ -80,7 +75,7 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeStrings_WhenMaximumStringValueAtFirstPosition_ShouldReturnMaximumString()
         {
-            string maximumValue = findMaximum.FindingMaximumStringValue("London", "Hogwarts", "Italy");
+            string maximumValue = new FindMaximum.GenericMaximum<string>("London", "Hogwarts", "Italy").MaximumMethod();
             Assert.AreEqual("London", maximumValue);
         }
 
@@ -90,7 +85,7 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeStrings_WhenMaximumStringValueAtSecondPosition_ShouldReturnMaximumString()
         {
-            string maximumValue = findMaximum.FindingMaximumStringValue("Hogwarts", "London", "Italy");
+            string maximumValue = new FindMaximum.GenericMaximum<string>("Hogwarts", "London", "Italy").MaximumMethod();
             Assert.AreEqual("London", maximumValue);
         }
 
@@ -101,7 +96,7 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeStrings_WhenMaximumStringValueAtThirdPosition_ShouldReturnMaximumString()
         {
-            string maximumValue = findMaximum.FindingMaximumStringValue("Hogwarts", "Italy", "London");
+            string maximumValue = new FindMaximum.GenericMaximum<string>("Hogwarts", "Italy", "London").MaximumMethod();
             Assert.AreEqual("London", maximumValue);
         }
 
