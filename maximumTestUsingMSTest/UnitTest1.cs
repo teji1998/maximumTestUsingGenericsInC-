@@ -20,5 +20,12 @@ namespace maximumTestUsingMSTest
             int maximumInteger = findMaximum.FindingMaximum(8, 3, 5);
             Assert.AreEqual(8, maximumInteger);
         }
+
+        [TestMethod]
+        public void givenThreeIntegers_WhenMaximumIntegerAtSecondPosition_ShouldReturnMaximumInteger()
+        {
+            int maximumInteger = findMaximum.FindingMaximum(3, 8, 5);
+            Assert.AreEqual(8, maximumInteger);
+        }
     }
 }
