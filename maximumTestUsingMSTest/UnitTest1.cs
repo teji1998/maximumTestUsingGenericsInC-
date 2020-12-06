@@ -15,8 +15,10 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtFirstPosition_ShouldReturnMaximumInteger()
         {
-            int maximumInteger = new FindMaximum.GenericMaximum<int>(8, 3, 5).MaximumMethod();
-            Assert.AreEqual(8, maximumInteger);
+            int[] intArray = { 8, 5, 3 };
+            FindMaximum.GenericMaximum<int> maximumValue = new FindMaximum.GenericMaximum<int>(intArray);
+            int output = maximumValue.MaximumMethod();
+            Assert.AreEqual(8, output);
         }
 
         /// <summary>
@@ -25,8 +27,10 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtSecondPosition_ShouldReturnMaximumInteger()
         {
-            int maximumInteger = new FindMaximum.GenericMaximum<int>(3, 8, 5).MaximumMethod();
-            Assert.AreEqual(8, maximumInteger);
+            int[] intArray = { 5, 8, 3 };
+            FindMaximum.GenericMaximum<int> maximumValue = new FindMaximum.GenericMaximum<int>(intArray);
+            int output = maximumValue.MaximumMethod();
+            Assert.AreEqual(8, output);
         }
 
         /// <summary>
@@ -35,8 +39,19 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeIntegers_WhenMaximumIntegerAtThirdPosition_ShouldReturnMaximumInteger()
         {
-            int maximumInteger = new FindMaximum.GenericMaximum<int>(3, 5, 8).MaximumMethod();
-            Assert.AreEqual(8, maximumInteger);
+            int[] intArray = { 3, 5, 8 };
+            FindMaximum.GenericMaximum<int> maximumValue = new FindMaximum.GenericMaximum<int>(intArray);
+            int output = maximumValue.MaximumMethod();
+            Assert.AreEqual(8, output);
+        }
+
+        [TestMethod]
+        public void GivenMoreThanThreeIntegers_WhenFindingMaximumInteger_ShouldReturnMaximumInteger()
+        {
+            int[] intArray = { 3,5,8,56,78,24,17};
+            FindMaximum.GenericMaximum<int> maximumValue = new FindMaximum.GenericMaximum<int>(intArray);
+            int output = maximumValue.MaximumMethod();
+            Assert.AreEqual(78, output);
         }
 
         /// <summary>
@@ -45,8 +60,10 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtFirstPosition_ShouldReturnMaximumFloatNumber()
         {
-            float maximumValue = new FindMaximum.GenericMaximum<float>(87.6f, 37.5f, 56.4f).MaximumMethod();
-            Assert.AreEqual(87.6f, maximumValue);
+            float[] floatArray = { 87.6f, 37.5f, 56.4f };
+            FindMaximum.GenericMaximum<float> maximumValue = new FindMaximum.GenericMaximum<float>(floatArray);
+            float output = maximumValue.MaximumMethod();
+            Assert.AreEqual(87.6f, output);
         }
 
         /// <summary>
@@ -55,8 +72,11 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtSecondPosition_ShouldReturnMaximumFloatNumber()
         {
-            float maximumValue = new FindMaximum.GenericMaximum<float>(37.5f, 85.6f, 56.4f).MaximumMethod();
-            Assert.AreEqual(85.6f, maximumValue);
+            float[] floatArray = { 37.5f, 85.6f, 56.4f };
+            FindMaximum.GenericMaximum<float> maximumValue = new FindMaximum.GenericMaximum<float>(floatArray);
+            float output = maximumValue.MaximumMethod();
+            Assert.AreEqual(85.6f, output);
+            
         }
 
         /// <summary>
@@ -65,8 +85,11 @@ namespace maximumTestUsingMSTest
         [TestMethod]
         public void givenThreeFloatNumbers_WhenMaximumFloatNumberAtThirdPosition_ShouldReturnMaximumFloatNumber()
         {
-            float maximumValue = new FindMaximum.GenericMaximum<float>(37.5f, 56.4f, 87.6f).MaximumMethod();
-            Assert.AreEqual(87.6f, maximumValue);
+            float[] floatArray = { 37.5f, 56.4f, 87.6f };
+            FindMaximum.GenericMaximum<float> maximumValue = new FindMaximum.GenericMaximum<float>(floatArray);
+            float output = maximumValue.MaximumMethod();
+            Assert.AreEqual(87.6f, output);
+            
         }
 
         /// <summary>

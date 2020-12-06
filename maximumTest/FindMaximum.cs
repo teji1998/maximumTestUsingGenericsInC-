@@ -6,50 +6,41 @@ namespace maximumTest
 {
     public class FindMaximum
     {
-        //
+        
         public class GenericMaximum <T> where T : IComparable
         {
             
-            public T firstValue, secondValue, thirdValue;
+            public T[] array;
 
             /// <summary>
             /// Initializes a new instance of the <see cref="GenericMaximum{T}"/> class.
             /// </summary>
-            /// <param name="firstValue">The first value.</param>
-            /// <param name="secondValue">The second value.</param>
-            /// <param name="thirdValue">The third value.</param>
-            public GenericMaximum(T firstValue, T secondValue, T thirdValue)
+            /// <param name="array">The array.</param>
+            public GenericMaximum(T[] array)
             {
-                this.firstValue = firstValue;
-                this.secondValue = secondValue;
-                this.thirdValue = thirdValue;
+                this.array = array;
             }
 
             /// <summary>
-            /// Finding the maximum value.
+            /// Sorts the data present in the array.
             /// </summary>
-            /// <param name="firstValue">The first value.</param>
-            /// <param name="secondValue">The second value.</param>
-            /// <param name="thirdValue">The third value.</param>
+            /// <param name="data">The data.</param>
             /// <returns></returns>
-            public static T FindingMaximumValue(T firstValue, T secondValue, T thirdValue)
+            public T[] Sort(T[] data)
             {
-                T maximum = firstValue;
-                if (secondValue.CompareTo(maximum) > 0)
-                    maximum = secondValue;
-                if (thirdValue.CompareTo(maximum) > 0)
-                    maximum = thirdValue;
-                return maximum;
+                Array.Sort(data);
+                return data;
             }
 
             /// <summary>
-            /// Maximum value is returned in this method
+            /// Maximum value is returned.
             /// </summary>
+            /// <param name="data">The data.</param>
             /// <returns></returns>
-            public T MaximumMethod()
+            public T MaximumMethod(params T[] data)
             {
-                T maxValue = GenericMaximum<T>.FindingMaximumValue(this.firstValue, this.secondValue, this.thirdValue);
-                return maxValue;
+                T[] sortedArray = Sort(this.array);
+                return sortedArray[sortedArray.Length - 1];
             }
         }
         
